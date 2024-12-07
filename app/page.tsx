@@ -2,8 +2,11 @@ import { getLogtoContext, signIn, signOut } from '@logto/next/server-actions';
 import SignIn from './sign-in';
 import SignOut from './sign-out';
 import { logtoConfig } from './logto';
+import Test from './test';
 
 const Home = async () => {
+
+  console.log('logtoConfig', logtoConfig);
   const { isAuthenticated, claims } = await getLogtoContext(logtoConfig);
 
   return (
@@ -30,6 +33,7 @@ const Home = async () => {
           />
         </p>
       )}
+      <Test></Test>
     </nav>
   );
 };

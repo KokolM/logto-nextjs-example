@@ -9,6 +9,7 @@ const SignIn = ({ onSignIn }: Props) => {
     <button
       onClick={() => {
         onSignIn();
+        // window.open('https://heymetest.joralmi.eu/logto/sign-in', '_self');
       }}
     >
       Sign In
